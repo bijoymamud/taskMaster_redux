@@ -1,4 +1,7 @@
 import { ArrowRightIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { Delete } from 'lucide';
+import { RiDeleteBin6Line } from 'react-icons/ri';
+
 
 const TaskCard = () => {
   const task = {
@@ -11,6 +14,7 @@ const TaskCard = () => {
     assignedTo: 'Mir Hussain',
     priority: 'high',
   };
+
 
   return (
     <div className="bg-secondary/10 rounded-md p-5">
@@ -29,7 +33,7 @@ const TaskCard = () => {
         <p>{task?.date}</p>
         <div className="flex gap-3">
           <button onClick={() => dispatch(removeTask(task.id))} title="Delete">
-            <TrashIcon className="h-5 w-5 text-red-500" />
+            <RiDeleteBin6Line className="h-5 w-5 text-red-500"  /> 
           </button>
           <button
             onClick={() =>
