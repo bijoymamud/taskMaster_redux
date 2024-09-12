@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 #root{
-  font-family: "Exo 2", sans-serif;
+  font-family: "Exo 2";
 }
 
 @tailwind base;
@@ -9,13 +9,13 @@
 @tailwind utilities;
 
 .btn {
-  @apply rounded-xl h-10 px-4 grid place-content-center font-semibold  transition-all;
+  @apply rounded-md h-10 px-6 grid place-content-center font-semibold  transition-all;
 }
 
-.btn-primary {
+/* .btn-primary {
   @apply bg-primary text-white;
 }
 
 .btn-danger {
   @apply bg-red-500 text-white;
-}
+} */

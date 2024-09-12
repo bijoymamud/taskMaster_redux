@@ -24,7 +24,7 @@ const Tasks = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="btn btn-primary"
+              className="btn bg-blue-700 text-white "
             >
               Add Task
             </button>
