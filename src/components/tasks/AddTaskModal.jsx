@@ -43,9 +43,9 @@ function AddTaskModal({ isOpen, setIsOpen }) {
                 <input
                    type='text'
                    className='rounded-md  text-sm'
-                  id="name"
-                    {...register("name", { required: true })} /> 
-                    {errors.name && <span className='text-red-500 font-normal'>This field is required</span>} 
+                  id="title"
+                    {...register("title", { required: true })} /> 
+                    {errors.title && <span className='text-red-500 font-normal'>This field is required</span>} 
           </div>
           
           {/* description */}
@@ -55,8 +55,8 @@ function AddTaskModal({ isOpen, setIsOpen }) {
                    type='text'
               className='rounded-md  text-sm'
             name='Description'
-                    {...register("Description", { required: true })} /> 
-                    {errors.Description && <span className='text-red-500 font-normal'>This field is required</span>} 
+                    {...register("description", { required: true })} /> 
+                    {errors.description && <span className='text-red-500 font-normal'>This field is required</span>} 
           </div>
           
           <div className='flex flex-col gap-1 mt-3'>
@@ -64,14 +64,14 @@ function AddTaskModal({ isOpen, setIsOpen }) {
                 <input
                    type='date'
                    className='rounded-md  text-sm'
-                    {...register("Deadline", { required: true })} /> 
-                    {errors.Deadline && <span className='text-red-500 font-normal'>This field is required</span>} 
+                    {...register("deadline", { required: true })} /> 
+                    {errors.deadline && <span className='text-red-500 font-normal'>This field is required</span>} 
           </div>
           
           <div className='flex flex-col gap-1 mt-3'>
           <label htmlFor="title">Assign To</label>
             <Select name="Assign" aria-label="Project status" className="rounded-md  text-sm"
-              {...register("Assign", { required: true })}
+              {...register("assign", { required: true })}
 
             >
               <option value="Al Mamud Bijoy">Al Mamud Bijoy</option>
@@ -97,7 +97,7 @@ function AddTaskModal({ isOpen, setIsOpen }) {
 
           <div className='flex items-center justify-end gap-3'>
             <button type='Cancle' onClick={()=>onCancle()} className='btn  bg-red-500 text-white mt-4 '>Cancle</button>
-            <button type='sumbit' className='btn bg-blue-700 text-white mt-4  '>Submit</button>
+            <button type='submit' className='btn bg-blue-700 text-white mt-4  '>Submit</button>
             
           </div>          
       </form>
