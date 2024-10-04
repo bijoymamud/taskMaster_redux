@@ -1,4 +1,3 @@
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useDispatch } from 'react-redux';
 import { removeTask, updateState } from '../../redux/features/tasks/tasksSlice';
@@ -22,7 +21,7 @@ const TaskCard = ({ task }) => {
   } else if (task.status === 'running') {
     previousStatus = 'pending';
   } else {
-    previousStatus = 'pending'; // Default to 'pending' if the task is 'archive' or not found
+    previousStatus = 'pending'; 
   }
 
   return (
@@ -44,7 +43,7 @@ const TaskCard = ({ task }) => {
         
         <p className='text-sm '><span className='font-semibold'>Priority :</span> { task.priority}</p>
         <div className="flex gap-3">
-          {/* Conditionally render the ArrowLeftIcon when the task is not in the 'pending' state */}
+      
           {task.status !== 'pending' && (
             <button
               title="Move to Previous Status"
