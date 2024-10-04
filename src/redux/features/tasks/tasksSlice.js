@@ -17,14 +17,14 @@ const tasksSlice = createSlice({
                 state.tasks.push({ id: lastElement.id + 1, status: "pending", ...payload })
             }
         },
-        
+     
         removeTask: (state, { payload }) => {
-           state.tasks =  state.tasks.filter((item) => item.id !== payload);
+            state.tasks = state.tasks.filter((item)=>item.id !==payload)
         },
-
+        
         updateState: (state, { payload }) => {
-            const target = state.tasks.find((item) => item.id === payload);
-            target.status = "processing"
+            const target = state.tasks.find((item) => item.id === payload.id);
+            target.status = payload.status;
         }
     
     }

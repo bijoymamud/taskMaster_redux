@@ -64,8 +64,8 @@ function AddTaskModal({ isOpen, setIsOpen }) {
                 <input
                    type='date'
                    className='rounded-md  text-sm'
-                    {...register("deadline", { required: true })} /> 
-                    {errors.deadline && <span className='text-red-500 font-normal'>This field is required</span>} 
+                    {...register("date", { required: true })} /> 
+                    {errors.date && <span className='text-red-500 font-normal'>This field is required</span>} 
           </div>
           
           <div className='flex flex-col gap-1 mt-3'>
@@ -86,11 +86,11 @@ function AddTaskModal({ isOpen, setIsOpen }) {
           <div className='flex flex-col gap-1 mt-3'>
           <label htmlFor="title">Priority</label>
             <Select name = "Priority" aria-label="Project status" className="rounded-md text-sm"
-              {...register("Priority", { required: true })}
+              {...register("priority", { required: true })}
             >
-              <option value="normal">Normal</option>
-              <option value="high">High</option>
-              <option value="argent">Argent</option>
+              <option value="Low">Normal</option>
+              <option value="Medium">High</option>
+              <option value="High">Argent</option>
             </Select>
 
                 </div>
