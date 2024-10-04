@@ -2,7 +2,7 @@ import { ArrowRightIcon} from '@heroicons/react/24/outline';
 // import { Delete } from 'lucide';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { useDispatch } from 'react-redux';
-import { updateState } from '../../redux/features/tasks/tasksSlice';
+import { removeTask, updateState } from '../../redux/features/tasks/tasksSlice';
 
 
 const TaskCard = ({task}) => {
@@ -25,7 +25,7 @@ const dispatch = useDispatch()
       <div className="flex justify-between mt-3">
         <p>{task?.date}</p>
         <div className="flex gap-3">
-          <button title="Delete">
+          <button title="Delete" onClick={()=>dispatch(removeTask(task.id))}>
             <RiDeleteBin6Line className="h-5 w-5 text-red-500"  /> 
           </button>
 
