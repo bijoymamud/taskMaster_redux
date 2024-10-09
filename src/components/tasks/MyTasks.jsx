@@ -8,19 +8,19 @@ import { userTasks } from '../../redux/features/tasks/tasksSlice';
 
 const MyTasks = () => {
 
-  const { tasks } = useSelector((state) => state.tasksSlice);
-  console.log('from mytasks', tasks)
+  const {tasks, userSpecificTasks } = useSelector((state) => state.tasksSlice);
+  console.log(userSpecificTasks)
+
 
   const { name : userName } = useSelector((state) => state.usersSlice);
-  console.log(name)
 
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(userTasks(userName))
-  } ,[dispatch, userName])
+  } ,[dispatch, userName,tasks])
 
-  
+
   return (
     <div>
       <h1 className="text-xl my-3">My Tasks</h1>
@@ -28,7 +28,7 @@ const MyTasks = () => {
       <div className=" h-[750px] overflow-auto space-y-3">
         
         {
-          tasks.map((item) =>
+          userSpecificTasks.map((item) =>
             <div
               key={item.id}
               className='bg-secondary/10 rounded-md p-3 flex justify-between'>
