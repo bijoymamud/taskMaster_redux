@@ -88,9 +88,9 @@ function AddTaskModal({ isOpen, setIsOpen }) {
             <Select name = "Priority" aria-label="Project status" className="rounded-md text-sm"
               {...register("priority", { required: true })}
             >
-              <option value="Low">Normal</option>
-              <option value="Medium">High</option>
-              <option value="High">Argent</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
             </Select>
 
                 </div>

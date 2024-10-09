@@ -10,7 +10,7 @@ const initialState = {
             description: 'You may or may not be aware of how pervasive AI is in our everyday lives already. According to one survey of 6,000 consumers, while only 33% of people think that they use AI, over 77% use an AI-powered service or device. Its not surprising that people are unaware of all the ways AI touches their lives. After all, the development of AI surged over recent years as researchers made strides they didnt expect to make for another several decades.',
             date: "2023-08-28",
             assign: 'Al Mamud Bijoy',
-            priority: 'high'
+            priority: 'High'
        }
 
     ],
